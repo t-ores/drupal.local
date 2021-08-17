@@ -1,0 +1,18 @@
+components
+.gitattributes
+.gitignore
+img
+dummy
+downloaded_modules
+import
+vendor
+config-drupal-local-2021-08-03-14-27.tar.gz
+devel_kint_extras-1.0.0.tar.gz
+drupal_db.sql
+drupal_db_(for drupal.local).zip
+DsField_examples.tar.gz
+dummy.tar.gz
+dummy (ащкь).tar.gz
+helloworld.tar.gz
+helloworld_autocomplete_result.tar.gz
+helloworld_plugin_filter_start.tar.gz
