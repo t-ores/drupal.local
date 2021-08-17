@@ -76,9 +76,40 @@ function dummy_theme($existing, $type, $theme, $path){
     'dummy_example_first' => [
       'variables' => [],
     ],
+    'dummy_example_second' => [
+      'variables' => [
+        'list_type' => 'ul',
+        'items' => [],
+      ],
+      'file' => 'dummy.theme.inc',
+    ],
+    'dummy_quote'=>[
+      'variables'=>[
+        'quote'=>NULL,
+        'author'=>NULL,
+        'year'=>NULL,
+        'source_title'=>NULL,
+        'source_url'=>NULL,
+      ],
+      'file' => 'dummy.theme.inc',
+    ],
   ];
 }
 
+/**
+ * implements template_preprocess_HOOK() for dummy_example_first.
+ * @param $variables
+ */
 function template_preprocess_dummy_example_first(&$variables){
+  $time = \Drupal::time()->getRequestTime();
+  /** @var @var \Drupal\Core\Datetime\DateFormatter $date_formatter */
+  $date_formatter = \Drupal::service('date.formatter');
+  $variables['date'] = $date_formatter->format($time);
 
+//  ksm($variables);
+  /*
+  echo '<pre>';
+  var_dump($variables);
+  echo '</pre>';
+  */
 }

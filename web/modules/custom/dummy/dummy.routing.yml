@@ -13,3 +13,27 @@ dummy.ajax_form_submit_example:
     _title: 'Form with AJAX submit'
   requirements:
     _permission: 'access content'
+
+dummy.example.first:
+  path: '/example/first'
+  defaults:
+    _title: 'Example'
+    _controller: '\Drupal\dummy\Controller\HookThemeExample1::build'
+  requirements:
+    _permission: 'access content'
+
+dummy.example.second:
+  path: '/example/second'
+  defaults:
+    _title: 'Example'
+    _controller: '\Drupal\dummy\Controller\HookThemeExample2::build'
+  requirements:
+    _permission: 'access content'
+
+dummy.example.third:
+  path: '/example/third'
+  defaults:
+    _title: 'Third'
+    _controller: '\Drupal\dummy\Controller\HookThemeExample3::build'
+  requirements:
+    _permission: 'access content'
