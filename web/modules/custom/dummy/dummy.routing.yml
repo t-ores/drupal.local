@@ -37,3 +37,18 @@ dummy.example.third:
     _controller: '\Drupal\dummy\Controller\HookThemeExample3::build'
   requirements:
     _permission: 'access content'
+
+dummy.language_negotiation_ip_settings:
+  path: '/admin/config/regional/language/detection/ip'
+  defaults:
+    _form: '\Drupal\dummy\Form\LanguageNegotiationIpSettings'
+    _title: 'Language IP negotiation settings'
+  requirements:
+    _permission: 'administer site configuration'
+
+dummy.lazy_page:
+  path: '/lazy-page'
+  defaults:
+    _controller: '\Drupal\dummy\Controller\LazyPage::build'
+  requirements:
+    _permission: 'access content'

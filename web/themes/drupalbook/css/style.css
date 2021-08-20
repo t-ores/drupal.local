@@ -42,3 +42,14 @@ body{
 .contact_form{
   padding: 5% 25%;
 }
+
+.dummy-quote-2017{
+  border-left: 5px solid darkgreen;
+}
+
+.contact-message-zakazat-obratnyy-dzvonok-form__header{
+  display: flex;
+}
+.contact-message-zakazat-obratnyy-dzvonok-form__header_item{
+  flex: auto;
+}

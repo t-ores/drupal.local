@@ -20,7 +20,7 @@ class DefaultPluginExample1 extends PluginMessagesPluginBase {
    * Возвращаем сообщение данного плагина.
    */
   public function getMessage() {
-    return 'This is message from Example #1';
+    return 'Source:.../modules/custom/plugin_messages/src/Plugin/PluginMessages/DefaultPluginExample1.php';
   }
 
 }

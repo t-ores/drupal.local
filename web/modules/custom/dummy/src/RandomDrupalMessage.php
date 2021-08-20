@@ -31,10 +31,10 @@ class RandomDrupalMessage {
    * сервиса и параметры из services.yml
    */
   public function setRandomMessage() {
-    $random_message = $this->random_message_generator->getRandomMessage();
-    $random_message_type = rand(0, count($this->message_types) - 1);
-    $drupal_set_message = \Drupal::messenger();
-    $drupal_set_message->addMessage($random_message, $this->message_types[$random_message_type]);
+//    $random_message = $this->random_message_generator->getRandomMessage();
+//    $random_message_type = rand(0, count($this->message_types) - 1);
+//    $drupal_set_message = \Drupal::messenger();
+//    $drupal_set_message->addMessage($random_message, $this->message_types[$random_message_type]);
   }
 
 }

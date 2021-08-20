@@ -10,10 +10,6 @@
 /**
  * Implements hook_theme().
  *
- * Объявляем наш темплейт через который будет прогоняться меню.
- * Тут ничего нет нового для тех кто ранее уже использовал данный хук.
- * Всё это на примере темы, использование в своём модуле может немного
- * отличаться.
  */
 
 function drupalbook_theme(){
@@ -31,6 +27,17 @@ function drupalbook_theme(){
   );
 }
 
+//function drupalbook_theme(){
+//  return [
+//    'dummy_node_list' => [
+//      'variables' => [
+//        'limit' => 10,
+//      ],
+//    ],
+//  ];
+//}
+
+
 /**
  * Implements hook_preprocess_page().
  */
@@ -47,4 +54,58 @@ function drupalbook_preprocess_page(&$variables) {
     ));
 
   $variables['contact_form'] = \Drupal::service('entity.form_builder')->getForm($message);
+}
+
+/**
+ * @param $variables
+ */
+function drupalbook_preprocess_html(&$variables){
+  //var_dump($variables);
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK() for dummy_quote.
+ *
+ * Adds new theme hook suggestions:
+ * - dummy-quote--{YEAR}
+ * - dummy-quote--{SOURCE}
+ * - dummy-quote--{AUTHOR}
+ * - dummy-quote--{AUTHOR}--{YEAR}--{SOURCE}
+ */
+function dummy_theme_suggestions_dummy_quote(array $variables){
+  $suggestions = [];
+  /** @var \Drupal\Core\Transliteration\PhpTransliteration $transliteration */
+  $transliteration = \Drupal::transliteration();
+  $author = $variables['author'];
+  $year = $variables['year'];
+  $source = $variables['source_title'];
+  if ($author){
+    $author = $transliteration->transliterate($author);
+    $author = strtolower($author);
+    $author = str_replace(' ', '_', $author);
+  }
+  if ($source){
+    $source = $transliteration->transliterate($source);
+    $source = strtolower($source);
+    $source = str_replace(' ', '_', $source);
+  }
+  $pattern = 'dummy_quote__';
+  if ($year){
+    //dummy_quote__{YEAR}.
+    $suggestions[] = $pattern . $year;
+  }
+  if ($source){
+    //dummy_quote__{SOURCE}.
+    $suggestions[] = $pattern . $source;
+  }
+  if ($author){
+    //dummy_quote__{AUTHOR}.
+    $suggestions[] = $pattern . $author;
+  }
+  if ($author && $source && $year){
+    //dummy_quote__{AUTHOR}__{YEAR}__{SOURCE}
+    $suggestions[] = $pattern . $author . '__' . $year . '__' . $source;
+  }
+  //var_dump($suggestions);
+  return $suggestions;
 }

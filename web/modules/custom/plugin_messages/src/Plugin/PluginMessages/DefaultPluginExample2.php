@@ -35,7 +35,7 @@ class DefaultPluginExample2 extends PluginMessagesPluginBase {
    */
   public function getPages() {
     return [
-      '/node/*',
+      //'/node/*',
       '/contact',
       '<front>',
     ];

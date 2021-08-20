@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => '7a92c3ced6b4b4a2e8e62342db2f4123ad77477e',
         'name' => 'drupal/recommended-project',
         'dev' => true,
     ),
@@ -878,12 +878,12 @@
             ),
         ),
         'drupal/recommended-project' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => '7a92c3ced6b4b4a2e8e62342db2f4123ad77477e',
             'dev_requirement' => false,
         ),
         'drupal/responsive_image' => array(
@@ -1038,6 +1038,15 @@
             'replaced' => array(
                 0 => '9.2.4',
             ),
+        ),
+        'drupal/twig_tweak' => array(
+            'pretty_version' => '3.1.2',
+            'version' => '3.1.2.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/twig_tweak',
+            'aliases' => array(),
+            'reference' => '3.1.2',
+            'dev_requirement' => false,
         ),
         'drupal/update' => array(
             'dev_requirement' => false,
@@ -1361,12 +1370,12 @@
             'dev_requirement' => false,
         ),
         'phpmailer/phpmailer' => array(
-            'pretty_version' => 'v6.5.0',
-            'version' => '6.5.0.0',
+            'pretty_version' => 'v6.5.1',
+            'version' => '6.5.1.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../phpmailer/phpmailer',
             'aliases' => array(),
-            'reference' => 'a5b5c43e50b7fba655f793ad27303cd74c57363c',
+            'reference' => 'dd803df5ad7492e1b40637f7ebd258fee5ca7355',
             'dev_requirement' => false,
         ),
         'psr/cache' => array(
