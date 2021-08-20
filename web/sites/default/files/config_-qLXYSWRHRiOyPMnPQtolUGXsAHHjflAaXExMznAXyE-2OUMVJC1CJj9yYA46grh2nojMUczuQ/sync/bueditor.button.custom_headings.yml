@@ -1,0 +1,23 @@
+uuid: 878f578f-979f-4955-bb2e-b14f7313099f
+langcode: ru
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: LRyTtRxSZ-lhRnmxOhy62ijJYYJ6aWuEPMAznVizrYA
+id: custom_headings
+label: Заголовки
+tooltip: null
+text: H
+cname: null
+shortcut: null
+code: |
+  js: E.tagChooser([
+    ['h1', 'Heading1'],
+    ['h2', 'Heading2'],
+    ['h3', 'Heading3'],
+    ['h4', 'Heading4'],
+    ['h5', 'Heading5'],
+    ['h6', 'Heading6']
+  ], {applyTag: false});
+template: null
+libraries: {  }
