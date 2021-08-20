@@ -24,11 +24,11 @@ function drupalbook_theme(){
       // Объявляем название файла-шаблона. html.twig указывать не нужно.
       'template' => 'my-custom-menu-template',
     ),
-    'dummy_node_list' => [
-      'variables' => [
-        'limit' => 10,
-      ],
-    ],
+//    'dummy_node_list' => [
+//      'variables' => [
+//        'limit' => 10,
+//      ],
+//    ],
   );
 }
 
