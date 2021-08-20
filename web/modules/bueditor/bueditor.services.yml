@@ -1,4 +1,0 @@
-services:
-  plugin.manager.bueditor.plugin:
-    class: Drupal\bueditor\BUEditorPluginManager
-    parent: default_plugin_manager

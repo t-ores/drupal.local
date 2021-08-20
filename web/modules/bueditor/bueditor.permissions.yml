@@ -1,5 +1,0 @@
-administer bueditor:
-  title: 'Administer BUEditor'
-  restrict access: true
-access ajax preview:
-  title: 'Access ajax preview'
